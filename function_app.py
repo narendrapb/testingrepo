@@ -27,4 +27,4 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
 @app.route(route="get")
 def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-    return func.HttpResponse(f"Hello. This HTTP triggered function executed successfully.")
+    return func.HttpResponse(f"Hello. This HTTP triggered function executed successfully modify1.")
