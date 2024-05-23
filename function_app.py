@@ -4,8 +4,8 @@ import logging
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
 @app.route(route="post")
-def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
+def http_post_trigger(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a POST request.')
 
     name = req.params.get('name')
     if not name:
@@ -23,8 +23,8 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
              status_code=200
         )
-        
+
 @app.route(route="get")
-def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
-    return func.HttpResponse(f"Hello. This HTTP triggered function executed successfully modify1.")
+def http_get_trigger(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a GET request.')
+    return func.HttpResponse(f"Hello. This HTTP triggered function executed successfully.")
