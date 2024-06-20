@@ -47,11 +47,12 @@ stages:
         fi
       workingDirectory: $(workingDirectory)
       displayName: 'Build extensions'
-
     - task: UsePythonVersion@0
-      displayName: 'Use Python 3.10'
       inputs:
-        versionSpec: 3.10 # Functions V2 supports Python 3.6 as of today
+        versionSpec: '3.10'
+        addToPath: true
+        architecture: 'x64'
+      displayName: 'Use Python 3.10'
 
     - bash: |
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
