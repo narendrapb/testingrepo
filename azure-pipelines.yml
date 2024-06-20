@@ -50,6 +50,7 @@ stages:
     - task: UsePythonVersion@0
       inputs:
         versionSpec: '3.10'
+        githubToken: $(github_token)
         addToPath: true
         architecture: 'x64'
       displayName: 'Use Python 3.10'
