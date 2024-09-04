@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkAlfred_react=self.webpackChunkAlfred_react||[]).push([[3323],{3323:(e,a,c)=>{c.d(a,{A:()=>d});c(9950);const d=c.p+"static/media/nodata.78f80c4dd63a5db00164f770f3f538b6.svg"}}]);
